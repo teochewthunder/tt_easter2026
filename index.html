@@ -9,7 +9,7 @@
 				border: 1px solid rgb(255, 0, 0);
 			}
 
-			body
+			h1
 			{
 				font-family: verdana;
 				text-align: center;
@@ -22,26 +22,61 @@
 				border: 5px solid rgb(255, 200, 0);
 				width: 300px;
 				height: 200px;
-				overflow: visible;
+				overflow: hidden;
 			}
 
 			#aura
 			{
 				width: 400px;
 				height: 400px;
-				position: absolute;
 				margin-top: -100px;
 				margin-left: -50px;
 				border-radius: 50%;
+				background-color: rgb(100, 0, 100);
 			}
 
 			#hills
 			{
 				width: 300px;
 				height: 100px;
-				position: absolute;
-				margin-top: 100px;
+				margin-top: -120px;
 			}
+
+			.hill
+			{
+				width: 150px;
+				height: 150px;
+				border-radius: 10px;
+				background-color: rgb(0, 0, 0);
+				transform-origin: 50% 50%;
+				transform: rotate(45deg);
+			}
+
+			.hill:nth-of-type(1)
+			{
+				margin-left: -50px;
+			}
+
+			.hill:nth-of-type(2)
+			{
+				margin-top: -180px;
+				margin-left: 75px;
+			}	
+
+			.hill:nth-of-type(3)
+			{
+				margin-top: -120px;
+				margin-left: 200px;
+			}	
+
+			.cross
+			{
+				font-size: 5em;
+				font-family: arial;
+				font-weight: bold;
+				margin-top: -270px;
+				text-align: center;
+			}					
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -58,7 +93,7 @@
 				<div class="hill"></div>
 				<div class="hill"></div>
 				<div class="hill"></div>
-				<div class="cross">t</div>
+				<div class="cross">&#10013;</div>
 			</div>
 		</div>
 
