@@ -83,14 +83,23 @@
 				margin-left: 200px;
 			}	
 
-			.cross
+			#cross
 			{
 				font-size: 5em;
 				font-family: arial;
 				font-weight: bold;
 				margin-top: -270px;
 				text-align: center;
-			}					
+			}
+
+			#shadow
+			{
+				font-size: 5em;
+				font-family: arial;
+				font-weight: bold;
+				margin-top: -100px;
+				text-align: center;
+			}						
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -99,12 +108,13 @@
 		<script>
 			$(document).ready(function() {
 				$( "#aura" ).toggleClass("rotated");
+				$( "#shadow" ).effect( "puff", { percent: 250}, 500 );
 
 			  setInterval(
 			  	function() 
 			  	{
 			    	$( "#aura" ).toggleClass("rotated");
-			    	$( ".cross" ).effect( "shake", { distance: 1, times: 2 }, 500 );
+			    	$( "#shadow" ).effect( "puff", { percent: 250}, 500 );
 			  	},
 			  	10000);
 			});
@@ -121,7 +131,8 @@
 				<div class="hill"></div>
 				<div class="hill"></div>
 				<div class="hill"></div>
-				<div class="cross">&#10013;</div>
+				<div id="cross">&#10013;</div>
+				<div id="shadow" class="cross">&#10013;</div>
 			</div>
 		</div>
 
