@@ -6,7 +6,7 @@
 		<style>
 			div 
 			{
-				border: 1px solid rgb(255, 0, 0);
+				border: 0px solid rgb(255, 0, 0);
 			}
 
 			h1
@@ -32,7 +32,19 @@
 				margin-top: -100px;
 				margin-left: -50px;
 				border-radius: 50%;
-				background-color: rgb(100, 0, 100);
+				background-image: repeating-conic-gradient(rgb(255, 255, 0) 5deg 10deg, rgb(255, 100, 0) 15deg 20deg, rgb(255, 255, 0) 25deg 30deg);
+			}
+
+			.unrotated
+			{
+				transform: rotate(0deg);
+				transition: 10s ease;
+			}
+
+			.rotated
+			{
+				transform: rotate(360deg);			
+				transition: 10s ease;
 			}
 
 			#hills
@@ -40,6 +52,8 @@
 				width: 300px;
 				height: 100px;
 				margin-top: -120px;
+			    position: relative; 
+			    z-index: 2;
 			}
 
 			.hill
@@ -81,6 +95,20 @@
 
 		<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$( "#aura" ).toggleClass("rotated");
+
+			  setInterval(
+			  	function() 
+			  	{
+			    	$( "#aura" ).toggleClass("rotated");
+			    	$( ".cross" ).effect( "shake", { distance: 1, times: 2 }, 500 );
+			  	},
+			  	10000);
+			});
+		</script>
 	</head>
 
 	<body>
@@ -99,8 +127,4 @@
 
 		<h1>HAPPY EASTER</h1>
 	</body>
-
-	<script>
-
-	</script>
 </html>
