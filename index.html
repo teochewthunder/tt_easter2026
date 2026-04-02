@@ -108,15 +108,15 @@
 
 		<script>
 			$(document).ready(function() {
-				$( "#aura" ).toggleClass("rotated");
-				$( "#shadow" ).effect( "puff", { percent: 250}, 1000 );
+				$("#aura").toggleClass("rotated");
+				$("#shadow").effect( "puff", {percent: 250}, 1000 );
 
 				setInterval
 				(
 				  	function() 
 				  	{
-				    	$( "#aura" ).toggleClass("rotated");
-				    	$( "#shadow" ).effect( "puff", { percent: 250}, 1000 );
+				    	$("#aura").toggleClass("rotated");
+				    	$("#shadow").effect( "puff", {percent: 250}, 1000 );
 				  	},
 				  	10000
 				);
@@ -126,7 +126,7 @@
 
 	<body>
 		<div id="container">
-			<div id="aura" class="unrotated">
+			<div id="aura">
 				
 			</div>	
 
